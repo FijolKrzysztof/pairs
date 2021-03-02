@@ -12,8 +12,14 @@ let clicked = null;
 let proceed = true;
 let firstClick = false;
 let disabled = [];
+let loaded = 0;
 
 class App extends Component {
+  handleLoading = () => {
+    loaded ++;
+    if(loaded === 24) document.getElementById('load').style.display = 'none';
+  }
+
   setTime = () => {
     setTimeout(() => {
       if(measureTime === true){
@@ -77,7 +83,7 @@ class App extends Component {
     let random = (Math.floor(Math.random() * 1000)) + 1;
     id[num] = random;
     id[change] = random;
-    this.setState({id});
+    this.setState({id}, function(){});
     proceed = true;
   }
 
@@ -167,78 +173,78 @@ class App extends Component {
           <Container>
             <Row id="row" className="justify-content-center">
               <Card className={cl1}>
-                <Card.Img id="i-0" onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[0] + "/300/450"} />
+                <Card.Img id="i-0" onLoad={this.handleLoading} onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[0] + "/300/450"} />
               </Card>
               <Card className={cl1}>
-                <Card.Img id="i-1" onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[1] + "/300/450"} />
+                <Card.Img id="i-1" onLoad={this.handleLoading} onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[1] + "/300/450"} />
               </Card>
               <Card className={cl1}>
-                <Card.Img id="i-2" onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[2] + "/300/450"} />
+                <Card.Img id="i-2" onLoad={this.handleLoading} onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[2] + "/300/450"} />
               </Card>
               <Card className={cl1}>
-                <Card.Img id="i-3" onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[3] + "/300/450"} />
+                <Card.Img id="i-3" onLoad={this.handleLoading} onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[3] + "/300/450"} />
               </Card>
               <Card className={cl1}>
-                <Card.Img id="i-4" onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[4] + "/300/450"} />
+                <Card.Img id="i-4" onLoad={this.handleLoading} onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[4] + "/300/450"} />
               </Card>
               <Card className={cl1}>
-                <Card.Img id="i-5" onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[5] + "/300/450"} />
+                <Card.Img id="i-5" onLoad={this.handleLoading} onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[5] + "/300/450"} />
               </Card>
 
               <Card className={cl2}>
-                <Card.Img className={hide2} id="i-6" onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[6] + "/300/450"} />
+                <Card.Img className={hide2} id="i-6" onLoad={this.handleLoading} onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[6] + "/300/450"} />
               </Card>
               <Card className={cl2}>
-                <Card.Img className={hide2} id="i-7" onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[7] + "/300/450"} />
+                <Card.Img className={hide2} id="i-7" onLoad={this.handleLoading} onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[7] + "/300/450"} />
               </Card>
               <Card className={cl2}>
-                <Card.Img className={hide2} id="i-8" onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[8] + "/300/450"} />
+                <Card.Img className={hide2} id="i-8" onLoad={this.handleLoading} onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[8] + "/300/450"} />
               </Card>
               <Card className={cl2}>
-                <Card.Img className={hide2} id="i-9" onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[9] + "/300/450"} />
+                <Card.Img className={hide2} id="i-9" onLoad={this.handleLoading} onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[9] + "/300/450"} />
               </Card>
               <Card className={cl2}>
-                <Card.Img className={hide2} id="i-10" onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[10] + "/300/450"} />
+                <Card.Img className={hide2} id="i-10" onLoad={this.handleLoading} onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[10] + "/300/450"} />
               </Card>
               <Card className={cl2}>
-                <Card.Img className={hide2} id="i-11" onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[11] + "/300/450"} />
+                <Card.Img className={hide2} id="i-11" onLoad={this.handleLoading} onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[11] + "/300/450"} />
               </Card>
 
               <Card className={cl3}>
-                <Card.Img className={hide3} id="i-12" onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[12] + "/300/450"} />
+                <Card.Img className={hide3} id="i-12" onLoad={this.handleLoading} onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[12] + "/300/450"} />
               </Card>
               <Card className={cl3}>
-                <Card.Img className={hide3} id="i-13" onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[13] + "/300/450"} />
+                <Card.Img className={hide3} id="i-13" onLoad={this.handleLoading} onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[13] + "/300/450"} />
               </Card>
               <Card className={cl3}>
-                <Card.Img className={hide3} id="i-14" onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[14] + "/300/450"} />
+                <Card.Img className={hide3} id="i-14" onLoad={this.handleLoading} onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[14] + "/300/450"} />
               </Card>
               <Card className={cl3}>
-                <Card.Img className={hide3} id="i-15" onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[15] + "/300/450"} />
+                <Card.Img className={hide3} id="i-15" onLoad={this.handleLoading} onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[15] + "/300/450"} />
               </Card>
               <Card className={cl3}>
-                <Card.Img className={hide3} id="i-16" onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[16] + "/300/450"} />
+                <Card.Img className={hide3} id="i-16" onLoad={this.handleLoading} onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[16] + "/300/450"} />
               </Card>
               <Card className={cl3}>
-                <Card.Img className={hide3} id="i-17" onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[17] + "/300/450"} />
+                <Card.Img className={hide3} id="i-17" onLoad={this.handleLoading} onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[17] + "/300/450"} />
               </Card>
               <Card className={cl3}>
-                <Card.Img className={hide3} id="i-18" onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[18] + "/300/450"} />
+                <Card.Img className={hide3} id="i-18" onLoad={this.handleLoading} onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[18] + "/300/450"} />
               </Card>
               <Card className={cl3}>
-                <Card.Img className={hide3} id="i-19" onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[19] + "/300/450"} />
+                <Card.Img className={hide3} id="i-19" onLoad={this.handleLoading} onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[19] + "/300/450"} />
               </Card>
               <Card className={cl3}>
-                <Card.Img className={hide3} id="i-20" onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[20] + "/300/450"} />
+                <Card.Img className={hide3} id="i-20" onLoad={this.handleLoading} onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[20] + "/300/450"} />
               </Card>
               <Card className={cl3}>
-                <Card.Img className={hide3} id="i-21" onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[21] + "/300/450"} />
+                <Card.Img className={hide3} id="i-21" onLoad={this.handleLoading} onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[21] + "/300/450"} />
               </Card>
               <Card className={cl3}>
-                <Card.Img className={hide3} id="i-22" onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[22] + "/300/450"} />
+                <Card.Img className={hide3} id="i-22" onLoad={this.handleLoading} onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[22] + "/300/450"} />
               </Card>
               <Card className={cl3}>
-                <Card.Img className={hide3} id="i-23" onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[23] + "/300/450"} />
+                <Card.Img className={hide3} id="i-23" onLoad={this.handleLoading} onError={(e) => this.handleError(e)} onClick={(e) => this.handleClick(e)} style={{opacity: 0}} src={"https://picsum.photos/id/" + id[23] + "/300/450"} />
               </Card>
             </Row>
           </Container>
@@ -250,6 +256,8 @@ class App extends Component {
   changeDifficulty = (e) => {
     proceed = false;
     measureTime = false;
+    loaded = 0;
+    document.getElementById('load').style.display = 'block';
     let num = parseInt(e.target.innerHTML);
     if(num === 1) difficulty = 0;
     if(num === 2) difficulty = 1;
